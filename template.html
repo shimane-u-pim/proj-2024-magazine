@@ -1,0 +1,172 @@
+<!DOCTYPE html><!-- この行は編集しないでください -->
+<html><!-- この行は編集しないでください --><head><meta charset="utf-8" /><link rel="stylesheet" href="style.css" /></head><body>
+
+<!-- このような記述はコメント文と言って、実際の印刷には記載されません。 -->
+<!-- 編集中のメモ書きにコメント文をご活用ください。 -->
+
+<!-- ================================== HEADER  BEGIN ================================== -->
+
+<style>:root { 
+	/*--h1-bg: url('file:///C:/Windows/Web/4K/Wallpaper/Windows/img19_1920x1200.jpg');
+	--h1-color: white;*/
+}</style>
+
+
+<div class="h1-bgimg">
+	<div>
+		<h1>記事タイトル</h1>
+		<p class="author">著者名</p>
+	</div>
+</div>
+
+<!-- ================================== HEADER   END  ================================== -->
+<!-- この行は編集しないでください --><main>
+<!-- ================================== CONTENT BEGIN ================================== -->
+
+<h2>大見出し</h2>
+
+
+<!-- 以下のpタグの間に文面を書いてください -->
+<p>
+	<!-- Use tab space. -->
+	文章文章文章文章…
+</p>
+
+<!-- 格言などの記入例 -->
+<figure class="quote">
+	<blockquote>
+		ウサイン・ボルトは100mを9.58秒で走れるからフルマラソンを68分で走れる <!-- 格言本文 -->
+	</blockquote>
+	<figcaption>
+		Jon Doe <!-- 発言者名 -->
+	</figcaption>
+</figure>
+
+<p>
+	文章と文章の間に何か挟む場合は、前後の文章は別々のpタグで括ってください。pタグで括っている範囲内に入れないでください。
+</p>
+
+<h3>中見出し</h3>
+
+<p>
+	文章文章文章文章…
+</p>
+
+<!-- 画像の挿入：画像が1枚の場合 -->
+<figure>
+	<img src="file:///C:\Windows\Web\4K\Wallpaper\Windows\img0_1920x1200.jpg" /><!-- 画像のパスを貼ってください -->
+	<figcaption>画像の名前やキャプション</figcaption>
+</figure>
+
+<!-- 画像の挿入：画像を2枚横に並べる場合 -->
+<table class="col2-img">
+	<tbody>
+		<tr>
+			<td>
+				<figure>
+  					<img src="file:///C:\Windows\Web\4K\Wallpaper\Windows\img0_1920x1200.jpg" /><!-- 左の画像のパス -->
+  					<figcaption>左の画像のキャプション</figcaption>
+				</figure>
+			</td>
+			<td>
+				<figure>
+  					<img src="file:///C:\Windows\Web\4K\Wallpaper\Windows\img0_1920x1200.jpg" /><!-- 右の画像のパス -->
+  					<figcaption>右の画像のキャプション</figcaption>
+				</figure>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>文章文章文章文章…</p>
+
+<!-- 表の記入例 -->
+<table class="bordered">
+	<thead>
+		<tr>
+			<!-- 列名 -->
+			<th scope="col">列1</th>
+			<th scope="col">列2</th>
+			<th scope="col">列3</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="row">行1</th>
+			<td>そろそろ</td>
+			<td>寿司を</td>
+		</tr>
+		<tr>
+			<th scope="row">行2</th>
+			<td>食べないと</td>
+			<td>死ぬぜ！</td>
+		</tr>
+	</tbody>
+</table>
+
+<h4>小見出し</h4>
+
+<!-- 以下、様々な表記の書き方 -->
+
+<p>
+	<i>italic</i>な表示にするには、<code>i</code>タグを利用します。
+</p>
+
+<p>
+	<b>太字</b>にするには、<code>b</code>タグを利用します。
+</p>
+
+<p>
+	<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Del</kbd>のようなキーボード入力を指示する場合、
+	<code>kbd</code>タグを利用します。ただし、<code>+</code>などはこのタグに含みません。
+</p>
+
+<!-- コードブロック -->
+<p>
+	<code>monospace</code>で表示するには、<code>code</code>タグを利用するか、preとcodeタグを組み合わせてコードブロックにします。
+</p>
+
+<pre><code>
+int main() {
+	// このように
+	return 0;
+}
+</code></pre>
+
+<!-- 箇条書き -->
+<ul> <!-- 箇条書きはulタグで始めます -->
+	<li>箇条書き1行目</li>
+	<li>箇条書きは<code>ul</code>タグで括った範囲に<code>li</code>タグを並べ立てることでで実装できます。</li>
+	<ul>
+		<li>ulタグの中にさらに<code>ul></code>を入れることで、ネスト(階層構造)も可能です。</li>
+	</ul>
+</ul> <!-- 箇条書きの終わりの/ulをお忘れなく -->
+
+<!-- 数字付き箇条書き -->
+<ol> <!-- 数字付き箇条書きはolタグで始めます -->
+	<li>箇条書き1行目</li>
+	<li>箇条書きは<code>ol</code>タグで括った範囲に<code>li</code>タグを並べ立てることでで実装できます。</li>
+	<ol>
+		<li>olタグの中にさらに<code>ol></code>を入れることで、ネスト(階層構造)も可能です。</li>
+	</ol>
+</ol> <!-- 数字付き箇条書きの終わりの/olをお忘れなく -->
+
+<p>
+	このプロジェクトは出版用途ですから、<a href="javascript:void(0)">aタグ</a>はこのように利用できなくなります<sup>1</sup><!-- 注釈番号を付ける場合は、supタグを使用してください -->。
+</p>
+
+<!-- コラム欄 -->
+<section class="clm">
+	<h3>コラムタイトル</h3> <!-- 適切なHeading Levelを利用してください -->
+	<p>
+		文章文章文章文章…
+	</p>
+</section>
+
+<hr />
+
+<!-- ページ末尾に注釈を付ける場合 -->
+1: 本来は<code>&lt;a&gt;aタグ&lt;/a&gt;</code>と記述されていました。
+
+<!-- ================================== CONTENT  END  ================================== -->
+<!-- この行は編集しないでください --></main></body></html>
