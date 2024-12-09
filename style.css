@@ -9,11 +9,11 @@ body {
 }
 
 main {
-	margin: 20px;
+	margin: 50px;
 }
 
 div.h1-bgimg {
-	height: 180px;
+	height: 250px;
 	background: var(--h1-bg);
 	background-size: cover;
 	display: flex;
@@ -104,6 +104,10 @@ table.bordered td {
 	padding: 3px;
 }
 
+table.col2-img td {
+	width: calc(50% - 6px);
+}
+
 th {
 	background-color: #ddd;
 }
@@ -119,4 +123,21 @@ a::before {
 a {
 	display: inline-block;
 	font-size: 0;
+}
+
+section.clm h1,
+section.clm h2,
+section.clm h3,
+section.clm h4,
+section.clm h5,
+section.clm h6 {
+	font-size: 16pt;
+	font-weight: bold;
+	margin: 5px;
+}
+
+section.clm {
+	border: 2px solid teal;
+	padding: 15px;
+	width: calc(100% - 35px);
 }
