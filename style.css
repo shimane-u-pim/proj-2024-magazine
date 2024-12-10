@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+@page {
+	size: 182mm 257mm;
+	margin: 2cm 0;
+}
+
+@page :first {
+	margin-top: 0;
+}
+
+>>>>>>> 05e66063743de5b354bc874f74675c604321a0a7
 :root {
 	--h1-bg: linear-gradient(to right, #ccc, #ddd);
 	--h1-color: black;
@@ -9,11 +21,19 @@ body {
 }
 
 main {
+<<<<<<< HEAD
 	margin: 50px;
+=======
+	margin: 50px 2cm;
+>>>>>>> 05e66063743de5b354bc874f74675c604321a0a7
 }
 
 div.h1-bgimg {
 	height: 250px;
+<<<<<<< HEAD
+=======
+	width: 100vw;
+>>>>>>> 05e66063743de5b354bc874f74675c604321a0a7
 	background: var(--h1-bg);
 	background-size: cover;
 	display: flex;
@@ -140,4 +160,8 @@ section.clm {
 	border: 2px solid teal;
 	padding: 15px;
 	width: calc(100% - 35px);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 05e66063743de5b354bc874f74675c604321a0a7
