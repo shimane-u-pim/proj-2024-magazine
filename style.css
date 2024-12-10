@@ -1,3 +1,12 @@
+@page {
+	size: 182mm 257mm;
+	margin: 2cm 0;
+}
+
+@page :first {
+	margin-top: 0;
+}
+
 :root {
 	--h1-bg: linear-gradient(to right, #ccc, #ddd);
 	--h1-color: black;
@@ -9,11 +18,12 @@ body {
 }
 
 main {
-	margin: 50px;
+	margin: 50px 2cm;
 }
 
 div.h1-bgimg {
 	height: 250px;
+	width: 100vw;
 	background: var(--h1-bg);
 	background-size: cover;
 	display: flex;
