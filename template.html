@@ -27,28 +27,35 @@
 
 
 <!-- 以下のpタグの間に文面を書いてください -->
-<p>文章文章文章文章…</p>
+<p>
+	<!-- Use tab space. -->
+	文章文章文章文章…
+</p>
 
 <!-- 格言などの記入例 -->
 <figure class="quote">
-  <blockquote>
-    ウサイン・ボルトは100mを9.58秒で走れるからフルマラソンを68分で走れる <!-- 格言本文 -->
-  </blockquote>
-  <figcaption>
-    Jon Doe <!-- 発言者名 -->
-  </figcaption>
+	<blockquote>
+		ウサイン・ボルトは100mを9.58秒で走れるからフルマラソンを68分で走れる <!-- 格言本文 -->
+	</blockquote>
+	<figcaption>
+		Jon Doe <!-- 発言者名 -->
+	</figcaption>
 </figure>
 
-<p>文章と文章の間に何か挟む場合は、前後の文章は別々のpタグで括ってください。pタグで括っている範囲内に入れないでください。</p>
+<p>
+	文章と文章の間に何か挟む場合は、前後の文章は別々のpタグで括ってください。pタグで括っている範囲内に入れないでください。
+</p>
 
 <h3>中見出し</h3>
 
-<p>文章文章文章文章…</p>
+<p>
+	文章文章文章文章…
+</p>
 
 <!-- 画像の挿入：画像が1枚の場合 -->
 <figure>
-  <img src="file:///C:\Windows\Web\4K\Wallpaper\Windows\img0_1920x1200.jpg" /><!-- 画像のパスを貼ってください -->
-  <figcaption>画像の名前やキャプション</figcaption>
+	<img src="file:///C:\Windows\Web\4K\Wallpaper\Windows\img0_1920x1200.jpg" /><!-- 画像のパスを貼ってください -->
+	<figcaption>画像の名前やキャプション</figcaption>
 </figure>
 
 <!-- 画像の挿入：画像を2枚横に並べる場合 -->
@@ -101,20 +108,29 @@
 
 <!-- 以下、様々な表記の書き方 -->
 
-<p><i>italic</i>な表示にするには、<code>i</code>タグを利用します。</p>
+<p>
+	<i>italic</i>な表示にするには、<code>i</code>タグを利用します。
+</p>
 
-<p><b>太字</b>にするには、<code>b</code>タグを利用します。</p>
+<p>
+	<b>太字</b>にするには、<code>b</code>タグを利用します。
+</p>
 
-<p><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Del</kbd>のようなキーボード入力を指示する場合、<code>kbd</code>タグを利用します。ただし、<code>+</code>などはこのタグに含みません。</p>
+<p>
+	<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Del</kbd>のようなキーボード入力を指示する場合、
+	<code>kbd</code>タグを利用します。ただし、<code>+</code>などはこのタグに含みません。
+</p>
 
 <!-- コードブロック -->
-<p><code>monospace</code>で表示するには、<code>code</code>タグを利用するか、preとcodeタグを組み合わせてコードブロックにします。</p>
+<p>
+	<code>monospace</code>で表示するには、<code>code</code>タグを利用するか、preとcodeタグを組み合わせてコードブロックにします。
+</p>
 
 <pre><code>
-	int main() {
-    	// このように
-    	return 0;
-	}
+int main() {
+	// このように
+	return 0;
+}
 </code></pre>
 
 <!-- 箇条書き -->
@@ -135,7 +151,9 @@
 	</ol>
 </ol> <!-- 数字付き箇条書きの終わりの/olをお忘れなく -->
 
-<p>このプロジェクトは出版用途ですから、<a href="javascript:void(0)">aタグ</a>はこのように利用できなくなります<sup>1</sup><!-- 注釈番号を付ける場合は、supタグを使用してください -->。</p>
+<p>
+	このプロジェクトは出版用途ですから、<a href="javascript:void(0)">aタグ</a>はこのように利用できなくなります<sup>1</sup><!-- 注釈番号を付ける場合は、supタグを使用してください -->。
+</p>
 
 <!-- コラム欄 -->
 <section class="clm">
