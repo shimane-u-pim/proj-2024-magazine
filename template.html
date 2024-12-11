@@ -1,12 +1,13 @@
-<!DOCTYPE html><!-- この行は編集しないでください -->
-<html><!-- この行は編集しないでください --><head><meta charset="utf-8" /><link rel="stylesheet" href="style.css" /></head><body>
+<!DOCTYPE html>
+<html><!-- この2行は編集しないでください --><head><meta charset="utf-8" /><link rel="stylesheet" href="style.css" /></head><body>
 
 <!-- このような記述はコメント文と言って、実際の印刷には記載されません。 -->
 <!-- 編集中のメモ書きにコメント文をご活用ください。 -->
 
 <!-- ================================== HEADER  BEGIN ================================== -->
 
-<style>:root { 
+<style>:root {
+	/* 背景を入れたい場合はコメントアウトして画像を相対パスで指定 */
 	/*--h1-bg: url('file:///C:/Windows/Web/4K/Wallpaper/Windows/img19_1920x1200.jpg');
 	--h1-color: white;*/
 }</style>
@@ -29,16 +30,19 @@
 <!-- 以下のpタグの間に文面を書いてください -->
 <p>
 	<!-- Use tab space. -->
+	<!-- DO NOT ADD LEADING '　' in p tag. -->
 	文章文章文章文章…
 </p>
 
-<!-- 格言などの記入例 -->
+<!-- 格言などを引用として表示する -->
 <figure class="quote">
 	<blockquote>
-		ウサイン・ボルトは100mを9.58秒で走れるからフルマラソンを68分で走れる <!-- 格言本文 -->
+		<!-- 格言本文 -->
+		ウサイン・ボルトは100mを9.58秒で走れるからフルマラソンを68分で走れる
 	</blockquote>
 	<figcaption>
-		Jon Doe <!-- 発言者名 -->
+		<!-- 発言者名等、必ず引用の条件を満たすこと -->
+		John Doe
 	</figcaption>
 </figure>
 
@@ -64,8 +68,8 @@
 		<tr>
 			<td>
 				<figure>
-  					<img src="file:///C:\Windows\Web\4K\Wallpaper\Windows\img0_1920x1200.jpg" /><!-- 左の画像のパス -->
-  					<figcaption>左の画像のキャプション</figcaption>
+					<img src="file:///C:\Windows\Web\4K\Wallpaper\Windows\img0_1920x1200.jpg" /><!-- 左の画像のパス -->
+					<figcaption>左の画像のキャプション</figcaption>
 				</figure>
 			</td>
 			<td>
@@ -78,13 +82,15 @@
 	</tbody>
 </table>
 
-<p>文章文章文章文章…</p>
+<p>
+	文章文章文章文章…
+</p>
 
-<!-- 表の記入例 -->
+<!-- 表の記入例（枠線有りの場合） -->
 <table class="bordered">
+	<!-- 先頭行がヘッダの場合、そうで無いならtbodyから書き始める。 -->
 	<thead>
 		<tr>
-			<!-- 列名 -->
 			<th scope="col">列1</th>
 			<th scope="col">列2</th>
 			<th scope="col">列3</th>
@@ -92,6 +98,7 @@
 	</thead>
 	<tbody>
 		<tr>
+			<!-- 先頭列がヘッダの場合、そうで無いなら普通のtdにする -->
 			<th scope="row">行1</th>
 			<td>そろそろ</td>
 			<td>寿司を</td>
@@ -99,14 +106,18 @@
 		<tr>
 			<th scope="row">行2</th>
 			<td>食べないと</td>
-			<td>死ぬぜ！</td>
+			<td>つらい</td>
 		</tr>
 	</tbody>
 </table>
 
 <h4>小見出し</h4>
 
-<!-- 以下、様々な表記の書き方 -->
+<!--
+===================================================
+以下、様々な表記の書き方
+===================================================
+-->
 
 <p>
 	<i>italic</i>な表示にするには、<code>i</code>タグを利用します。
@@ -128,8 +139,8 @@
 
 <pre><code>
 int main() {
-	// このように
-	return 0;
+    // このように
+    return 0;
 }
 </code></pre>
 
@@ -152,21 +163,23 @@ int main() {
 </ol> <!-- 数字付き箇条書きの終わりの/olをお忘れなく -->
 
 <p>
-	このプロジェクトは出版用途ですから、<a href="javascript:void(0)">aタグ</a>はこのように利用できなくなります<sup>1</sup><!-- 注釈番号を付ける場合は、supタグを使用してください -->。
+	<!-- 脚注番号を付ける場合は、supタグを使用してください -->
+	このプロジェクトは出版用途ですから、<a href="javascript:void(0)">aタグ</a>はこのように利用できなくなります<sup>1</sup>。
 </p>
 
 <!-- コラム欄 -->
 <section class="clm">
-	<h3>コラムタイトル</h3> <!-- 適切なHeading Levelを利用してください -->
+	<!-- 適切なHeading Levelを利用してください。上位のヘディングと同じか1つ下のレベルが最適ですが。h6までにとどめてください。 -->
+	<h3>コラムタイトル</h3>
 	<p>
 		文章文章文章文章…
 	</p>
 </section>
 
+<!-- ページ末尾に脚注を付ける場合 -->
 <hr />
-
-<!-- ページ末尾に注釈を付ける場合 -->
 1: 本来は<code>&lt;a&gt;aタグ&lt;/a&gt;</code>と記述されていました。
+<!-- ページ末尾に脚注を付ける場合 ここまで -->
 
 <!-- ================================== CONTENT  END  ================================== -->
 <!-- この行は編集しないでください --></main></body></html>
