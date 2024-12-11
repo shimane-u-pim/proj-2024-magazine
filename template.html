@@ -87,6 +87,7 @@
 
 <!-- 表の記入例（枠線有りの場合） -->
 <table class="bordered">
+	<!-- 先頭行がヘッダの場合、そうで無いならtbodyから書き始める。 -->
 	<thead>
 		<tr>
 			<th scope="col">列1</th>
@@ -96,6 +97,7 @@
 	</thead>
 	<tbody>
 		<tr>
+			<!-- 先頭列がヘッダの場合、そうで無いなら普通のtdにする -->
 			<th scope="row">行1</th>
 			<td>そろそろ</td>
 			<td>寿司を</td>
