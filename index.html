@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html><!-- この2行は編集しないでください --><head><meta charset="utf-8" /><link rel="stylesheet" href="style.css" /></head><body>
+
+<!-- このような記述はコメント文と言って、実際の印刷には記載されません。 -->
+<!-- 編集中のメモ書きにコメント文をご活用ください。 -->
+
+<!-- ================================== HEADER  BEGIN ================================== -->
+
+<style>:root {
+	/* 背景を入れたい場合はコメントアウトして画像を相対パスで指定 */
+	/*--h1-bg: url('file:///C:/Windows/Web/4K/Wallpaper/Windows/img19_1920x1200.jpg');
+	--h1-color: white;*/
+}</style>
+
+<style>
+	.mark {
+		background-color: #ffffff;
+	}
+	.codearea {
+		background-color: #dfdfdf;
+		border: solid 1px #000;
+	}
+	pre {
+		padding: 5px;
+	}
+	code {
+		font-size: 15px;
+	}
+</style>
+
+
+<div class="h1-bgimg">
+	<div>
+		<h1>計算過程が見える電卓アプリ紹介</h1>
+		<p class="author">梶岡 響</p>
+	</div>
+</div>
+
+<!-- ================================== HEADER   END  ================================== -->
+<!-- この行は編集しないでください --><main>
+<!-- ================================== CONTENT BEGIN ================================== -->
+
+<h2>挨拶</h2>
+<!-- 以下のpタグの間に文面を書いてください -->
+<p>
+	<!-- Use tab space. -->
+	<!-- DO NOT ADD LEADING '　' in p tag. -->
+	機械系専攻、学部3回生の梶岡です。Pimに入部してから約1年が経過し幽霊気味ですが部誌制作の機会を頂きました。ありがとうございます。
+	普段は趣味でWebアプリや、DiscordのBotなどを気が向いたときに制作しています。<br>
+	私の頁では今年2024年の夏に作成したWindowsで動く電卓アプリを紹介します。<br>
+</p>
+
+<!-- 格言などを引用として表示する -->
+<!-- <figure class="quote"> -->
+	<!-- <blockquote> -->
+		<!-- 格言本文 -->
+		<!-- ウサイン・ボルトは100mを9.58秒で走れるからフルマラソンを68分で走れる -->
+	<!-- </blockquote> -->
+	<!-- <figcaption> -->
+		<!-- 発言者名等、必ず引用の条件を満たすこと -->
+		<!-- John Doe -->
+	<!-- </figcaption> -->
+<!-- </figure> -->
+
+<!-- <p> -->
+	<!-- 文章と文章の間に何か挟む場合は、前後の文章は別々のpタグで括ってください。pタグで括っている範囲内に入れないでください。 -->
+<!-- </p> -->
+
+<!-- <h3>中見出し</h3> -->
+<hr>
+<h2>経緯／概要</h2>
+<p>
+	電卓には2つの有名なアルゴリズムが用いられるのですが、このアルゴリズムによる数式の変換の過程を逐次表示してみたいという興味が湧きました。
+	<!-- <br>制作における一番の目的はこの「処理の逐次表示」です。そのほかに、破綻しない入力規則や表示モードの切り替え機能などを実装し、多少のバグが残っていますが実用においても十分なものになったと思います。 -->
+</p>
+<h4>機能</h4>
+<ul>
+	<li>入力数式に対する「後置記法」と「解」の両方を求め表示する</li>
+	<li>計算処理のログ表示</li>
+	<li>その他...</li>
+	<ul>
+		<li>破綻しない入力規則 （←小数点にバグあり）</li>
+		<li>括弧による掛け算記号省略への対応</li>
+		<li>括弧深度の表示</li>
+		<li>2つのモードの切替</li>
+		<li>表示ペースのリアルタイム変更</li>
+	</ul>
+</ul>
+<h4>モード</h4>
+<ul>
+	<li>「PROCESS」: <span style="color:#0053da;">過程表示モード</span>　入力数式→後置記法→解までの変換・計算過程を表示します。</li>
+	<li>「INSTANT」: <span style="color:#e53368;">即時計算モード</span>　入力された数式は即座に計算されます。（ログは残りません）</li>
+</ul>
+<h4>制作期間</h4>
+<ul>
+	<li>2024/08/10 ～ 2024/09/07</li>
+</ul>
+<h4>開発環境</h4>
+<ul>
+	<li>ﾌﾚｰﾑﾜｰｸ：.NET Framework 4.8</li>
+	<li>IDE   ：Visual Studil 2022</li>
+	<li>言語  ：C#</li>
+</ul>
+<h4>Githubリポジトリ</h4>
+<ul>
+	<li>https://github.com/kah221/dotnet-calculator</li>
+</ul>
+
+<hr>
+<h2>完成したもの</h2>
+<p>
+	右側に制御・入力ボタン、上部に入力数式、左の領域の上半分は後置記法への変換過程を表示し、下半分は解を求める過程を表示します。<br>
+	そして、log領域には「各変換処理で具体的にどんな操作をしたのか」や「括弧が閉じていない」「この式は解けません」というメッセージをリアルタイムに表示します。<br><br>
+	PROCESSモードでは次のように順々に表示が更新されてゆき、最終的に後置記法と解が表示された状態で停止します。<br>
+	また、こだわりポイントとして、計算処理が進行中でも「Calcurate」ボタン横のスライダーから表示の更新ペースを毎秒1～22フレームまでの間で調節することができます。
+</p>
+<figure style="height:45vh;">
+	<img src="https://floor02.sakura.ne.jp/_imgshared/P-running.png" alt="PROCESSモード" style="height:100%;">
+	<!-- <figcaption>PROCESSモードで計算中の様子</figcaption> -->
+</figure>
+<br>
+<p>さらに、このモードでは画面下のlogの領域をクリックすることで処理のログを表示できます。</p>
+<figure>
+	<img src="https://floor02.sakura.ne.jp/_imgshared/P-log.png" alt="PROCESSモードログ表示" style="height:100%;">
+	<!-- <figcaption>処理のログ表示</figcaption> -->
+</figure>
+
+<br>
+<p>
+	一方、INSTANTモードでは、入力した数式が即座に計算され、後置記法と解が表示されるだけです。計算開始ボタンを押さなくとも直ぐに答えが表示される仕様は、意外に便利だなと思いました。過程なんかどうでもいいから早く答えを知りたい！という時に使います。
+</p>
+<p>
+	もう一つのこだわりポイントとして、モード切替のUIがあります。この電卓は機能としてはシンプルなので、直接モードを切り替えるボタンを配置しました。モードに対応した色で視覚的にわかりやすくなっています。また、INSTANTモードではスライダーと「Calcurate」ボタンは無効化されています。
+</p>
+<figure style="height:10vh;">
+	<img src="https://floor02.sakura.ne.jp/_imgshared/modeswitch.png" alt="モードの比較" style="height:100%;">
+	<!-- <figcaption>モード切替比較</figcaption> -->
+</figure>
+
+<br>
+<hr>
+<h2>仕組みの説明</h2>
+<p>
+	機械にスムースに計算させるために、表記方法を変える必要があります。
+</p>
+<ul>
+	<li>中置記法：演算子を被演算子の中間に配置する記法</li>
+	<li>後置記法：演算子を被演算子の後ろに配置する記法</li>
+</ul>
+<p>
+	この電卓では、4段階の変換・演算を経て解が求まります。
+</p>
+<figure style="height:35vh;">
+	<img src="https://floor02.sakura.ne.jp/_imgshared/convertFlow_400.png" alt="全体処理の流れの図" style="height:100%;">
+	<!-- <figcaption>図1</figcaption> -->
+</figure>
+<p>以下、処理の実行される順番で紹介します。</p>
+
+<h3>1. 破綻しない入力規則の設定</h3>
+<p>
+	ここが一番大変な作業でした。数式の先頭に閉じ括弧、小数点、演算子の隣接など、数式として破綻してしまう入力をブロックします。<br>
+	用意されている入力可能な文字毎を分類し、そのグループ毎に「直前に在ってはならない文字（グループ）」を定義しています。入力文字列の状態や括弧の深度等の情報から判断していますが、一文字削除で小数点を削除した時バグります。<br>
+	因みに、小数点については次のような状態変数で制御しています。
+</p>
+<div class="codearea">
+<pre><code>int period_phase = 0;   // 小数点を入力できるか
+// 0→可能
+// 1→不可 小数点記号が入力され 数値 の入力を待機中
+// 2→不可 小数点以下が1つ以上入力され 数値と小数点以下以外
+// 	の入力を待機中
+</code></pre>
+</div>
+<!-- <figure style="height:35vh;"> -->
+	<!-- <img src="https://floor02.sakura.ne.jp/_imgshared/inputSeiri.png" alt="全体処理の流れの図" style="height:100%;"> -->
+	<!-- <figcaption>図1</figcaption> -->
+<!-- </figure> -->
+
+<h3>2. 入力数式の変換（結合）</h3>
+<p>
+	数式としての破綻は無くなりましたが、2桁以上の数値も1文字ずつ分離した状態なので、意味が通じるように結合します。<br>
+	入力文字列を左端から1文字ずつ読み取り、演算子、数値、小数点、括弧閉じ開き、のどれに一致するかを判断します。<br>
+	そして、今回読み取った1文字と、1つ前のループで読み取った1文字との関係性から、1つの要素として扱うかどうかを判断します。<br>
+	<span style="font-size:85%;">　　例えば「12+」 という並びの場合、「1 2」は結合、「2 +」は分離させ配列に格納していきます。</span><br><br>
+	また、入力の度に数式が解けるかどうかを表示したかったので、1.と2.は同時に実行するようにしています。
+</p>
+
+<h3>3. 後置記法への変換</h3>
+<p>2. までの行程で中置記法の配列が用意できたので、次のアルゴリズムで後置記法へ変換します。</p>
+<figure style="height:30vh;">
+	<img src="https://floor02.sakura.ne.jp/_imgshared/conversion.png" style="height:100%;">
+	<!-- <figcaption>図1</figcaption> -->
+</figure>
+<p>また、重要な記号の優先順位は次のようになります。（大きいほど優先順位高）</p>
+<figure style="height:8vh;">
+	<img src="https://floor02.sakura.ne.jp/_imgshared/priority.png" alt="記号優先順位" style="height:100%;">
+	<!-- <figcaption>図1</figcaption> -->
+</figure>
+
+
+
+<h3>4. 後置記法→解への演算</h3>
+<p>後置記法から解を求める際には次のアルゴリズムを使います。</p>
+<figure style="height:18vh;">
+	<img src="https://floor02.sakura.ne.jp/_imgshared/solve.png" alt="解を求めるアルゴリズムの説明" style="height:100%;">
+	<!-- <figcaption>図1</figcaption> -->
+</figure>
+<p>
+	こちらは比較的短いので実装例を載せます。
+</p>
+<div class="codearea">
+<pre><code>/// &lt;summary&gt;
+/// 後置記法の配列を受け取り解を求める関数
+/// &lt;/summary&gt;
+/// &lt;param name="poland"&gt;後置記法（配列）「rev_poland」&lt;/param&gt;
+/// &lt;returns&gt;解（最終的なstackの中身）<&lt;/returns&gt;
+private float? Calculate(string[] poland)
+{
+  // 計算用変数用意
+  Stack&lt;float&gt; stack = new Stack&lt;float&gt;();
+
+  // 配列:Cの要素数だけ繰り返す
+  foreach (string x in poland)
+  {
+    // 桁数がfloat型で扱える範囲外のときnullで返し 中断の処理へ
+    if (x.Count() > 30) return null;
+
+    // 配列:Cから取り出した要素の種類を判別
+    // float型に変換できたとき 被演算子
+    if (float.TryParse(x, out float xf))
+    {
+      // スタック:DにPush
+      stack.Push(xf);
+    }
+    else // float型に変換できなかったとき 演算子
+    {
+      float r = stack.Pop();  // right
+      float l = stack.Pop();  // left
+      // 演算子による演算を行い 結果をスタック:DへPush
+      switch (x)
+      {
+        case "+":
+          stack.Push(l + r); break;
+        case "-":
+          stack.Push(l - r); break;
+        case "x":
+          stack.Push(l * r); break;
+        case "/":
+          stack.Push(l / r); break;
+      }
+    }
+  return stack.Pop(); // スタック:DからPopしたものが解
+}
+</code></pre>
+</div>
+
+
+<h2>感想と振り返り</h2>
+<p>
+	数年前に父親から電卓には有名な記法が使われているんだよということを聞いて以来、漠然と電卓を再現してみたいと思っていました。今回、初めて使うフレームワークとあまり自身の無い言語で、1つのバグとちょっとした使いづらさを残しつつも実用面では完成させられました。<br>
+	情報系の学生から見ると浅いものだとは思いますが、電卓の仕組みの理解や、非同期処理の書き方、どのような画面配置、配色にすると使いやすいか？など沢山の試行錯誤があり勉強になりました。また、この電卓に限らず、こだわりを埋め込んだりと好きな機能を自分で決定できることが楽しいので、今後も引き続き興味の湧いたものを作っていけたら良いなと思います。
+</p>
+
+<!-- ================================== CONTENT  END  ================================== -->
+<!-- この行は編集しないでください --></main></body></html>
